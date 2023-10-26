@@ -1,0 +1,13 @@
+All: miles2km kph
+LIB= libConversions.o
+CC=gcc
+
+Miles2km: miles2km.o $(LIB)
+        $(CC) $@.0 $(LIB) -g -o  $@
+
+Kph: kph.o $(LIB)
+         $(CC) $@.0 $(LIB) -g -o  $@
+
+.s.o:
+         $(CC) .o=.s-g -c -o  $@
+
